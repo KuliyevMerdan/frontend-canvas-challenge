@@ -35,6 +35,18 @@ scripts/              проверки
 
 Назовите приложение в `apps/web` как `@canvas/web` и добавьте команды его запуска в README решения. Пока фронтенда нет, `npm run dev` запускает только API.
 
+## Решение
+
+Фронтенд добавлен в `apps/web` (`@canvas/web`): React + TypeScript + Vite + `@xyflow/react`.
+
+```sh
+npm run dev:web       # дев-сервер фронтенда на http://localhost:5173 (API запустите отдельно: npm run dev)
+npm run build:web     # продакшен-сборка в apps/web/dist
+npm run preview:web   # просмотр собранного фронтенда
+```
+
+Устройство API-слоя, debounce и очереди сохранений, разбор обработки графа, проверенные сценарии и известные недоработки — в [apps/web/README.md](apps/web/README.md).
+
 ```sh
 npm run check       # форматирование, сборка, тесты, OpenAPI
 npm run build
